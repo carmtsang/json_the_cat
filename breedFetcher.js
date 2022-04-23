@@ -8,12 +8,12 @@ const fetchBreedDescription = (breedName, callback) => {
       const data = JSON.parse(body);
     
       if (!data[0]) {
-        return callback(`No information on ${breedName} cats found`, null)
+        return callback(`No information on ${breedName} cats found`, null);
       }
 
-      return callback(null, data[0].description) //print discription of the cat.
-    }; 
-  })
-}
+      return callback(null, data[0].description); //print discription of the cat.
+    }
+  });
+};
 
 module.exports = { fetchBreedDescription };
